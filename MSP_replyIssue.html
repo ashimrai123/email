@@ -23,6 +23,7 @@
       }
       :root {
         --primary: #ea580c;
+        --secondary: #090f3a;
       }
       .email-container {
         width: 100%;
@@ -94,6 +95,14 @@
         justify-content: center;
       }
 
+      .message {
+        font-style: italic;
+        border-left: solid 0.5rem var(--primary);
+        padding: 1rem 1rem;
+        background-color: #090f3a;
+        color: white;
+      }
+
       @media only screen and (max-width: 600px) {
         h1 {
           font-size: 22px;
@@ -110,11 +119,21 @@
   <body>
     <div class="email-container">
       <h1 class="center">[subject]</h1>
-      <div class="tick">
-        <i class="fa fa-exclamation" aria-hidden="true"></i>
-      </div>
 
-      <p>${error}</p>
+      <p>Dear [name],</p>
+
+      <p>
+        We have reviewed your issue and would like to provide the following
+        update:
+      </p>
+
+      <p class="message">[message]</p>
+
+      <p>
+        If you have any further questions or need more assistance, please feel
+        free to reach out to us.
+      </p>
+      <p>Thanks & Regards<br />Team MSP Academy</p>
 
       <div class="logo">
         <img
@@ -131,20 +150,20 @@
             ><img
               src="https://i.ibb.co/j87g9wq/facebook-svgrepo-com.png"
               alt="Facebook"
-              target="_blank"
           /></a>
           <a
             href="https://www.instagram.com/mspacademy.co?igsh=MTR1ODYwNnBpdXV0cQ%3D%3D"
+            target="_blank"
             ><img
               src="https://i.ibb.co/BNTWb33/instagram-167-svgrepo-com.png"
               alt="Instagram"
-              target="_blank"
           /></a>
-          <a href="https://www.linkedin.com/company/msp-solution-pvt-ltd/"
+          <a
+            href="https://www.linkedin.com/company/msp-solution-pvt-ltd/"
+            target="_blank"
             ><img
               src="https://i.ibb.co/252xfLW/linkedin-161-svgrepo-com.png"
               alt="LinkedIn"
-              target="_blank"
           /></a>
         </div>
         <p>© 2024 - 2024. MspAcademy.com</p>

@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+
     <style>
       body {
         font-family: "Poppins", sans-serif;
@@ -63,24 +64,7 @@
         height: 20px;
         margin: 0 5px;
       }
-      .code-container {
-        height: 3rem;
-        width: 9rem;
-        border-radius: 10px;
-        background-color: var(--primary);
-        text-align: center;
-        margin: 0 auto;
-      }
-      .code-container:hover {
-        opacity: 0.9;
-      }
-      .code {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        color: white;
-      }
+
       .logo {
         margin-bottom: 20px;
       }
@@ -101,7 +85,6 @@
         padding: 1.5rem;
         font-size: x-large;
       }
-
       .tick i:hover {
         opacity: 0.9;
       }
@@ -109,6 +92,12 @@
       .center {
         display: flex;
         justify-content: center;
+        text-align: center;
+      }
+
+      .welcome {
+        font-weight: 400;
+        font-size: large;
       }
 
       @media only screen and (max-width: 600px) {
@@ -130,18 +119,10 @@
       <div class="tick">
         <i class="fa fa-check" aria-hidden="true"></i>
       </div>
-      <p>Dear [name],</p>
-
-      <p>
-        Welcome to Msp Academy. Thank you for creating project. Your project has
-        been created successfully. <br />
-        If you need to make any changes on your project, please use this
+      <p class="center welcome">
+        Welcome to MSP ASSIGNMENT you can now log in!
       </p>
-      <div class="code-container">
-        <a class="code" href="[link]">Link</a>
-      </div>
-      <p>Thanks & Regards<br />Team MSP Academy</p>
-      <div class="logo">
+      <div class="logo center">
         <img
           src="https://i.ibb.co/K6kprS9/MSPLogo.png"
           alt="MSP Academy Logo"

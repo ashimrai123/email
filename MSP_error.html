@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+
     <style>
       body {
         font-family: "Poppins", sans-serif;
@@ -22,6 +23,7 @@
       }
       :root {
         --primary: #ea580c;
+        --secondary: #090f3a;
       }
       .email-container {
         width: 100%;
@@ -42,7 +44,7 @@
         line-height: 1.5;
       }
       a {
-        color: #007bff;
+        color: inherit;
         text-decoration: none;
       }
       .footer {
@@ -63,24 +65,7 @@
         height: 20px;
         margin: 0 5px;
       }
-      .code-container {
-        height: 3rem;
-        width: 9rem;
-        border-radius: 10px;
-        background-color: var(--primary);
-        text-align: center;
-        margin: 0 auto;
-      }
-      .code-container:hover {
-        opacity: 0.9;
-      }
-      .code {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        color: white;
-      }
+
       .logo {
         margin-bottom: 20px;
       }
@@ -98,10 +83,9 @@
         color: white;
         background-color: var(--primary);
         border-radius: 50%;
-        padding: 1.5rem;
+        padding: 1.5rem 2.1rem;
         font-size: x-large;
       }
-
       .tick i:hover {
         opacity: 0.9;
       }
@@ -109,6 +93,14 @@
       .center {
         display: flex;
         justify-content: center;
+      }
+
+      .error-message {
+        font-style: italic;
+        border-left: solid 0.5rem var(--primary);
+        padding: 1rem 1rem;
+        background-color: #090f3a;
+        color: white;
       }
 
       @media only screen and (max-width: 600px) {
@@ -128,19 +120,11 @@
     <div class="email-container">
       <h1 class="center">[subject]</h1>
       <div class="tick">
-        <i class="fa fa-check" aria-hidden="true"></i>
+        <i class="fa fa-exclamation" aria-hidden="true"></i>
       </div>
-      <p>Dear [name],</p>
 
-      <p>
-        Welcome to Msp Academy. Thank you for creating project. Your project has
-        been created successfully. <br />
-        If you need to make any changes on your project, please use this
-      </p>
-      <div class="code-container">
-        <a class="code" href="[link]">Link</a>
-      </div>
-      <p>Thanks & Regards<br />Team MSP Academy</p>
+      <p class="error-message">${error}</p>
+
       <div class="logo">
         <img
           src="https://i.ibb.co/K6kprS9/MSPLogo.png"
